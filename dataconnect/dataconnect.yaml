@@ -1,0 +1,12 @@
+specVersion: "v1beta"
+serviceId: "red_crescent"
+location: "us-central1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "red_crescent-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]

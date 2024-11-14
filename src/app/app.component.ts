@@ -6,11 +6,12 @@ import {LoginComponent} from './login/login.component';
 import { DonArgentComponent } from './don-argent/don-argent.component';
 import { NewaccComponent } from './newacc/newacc.component';
 import { DonComponent } from './don/don.component';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NewaccComponent,LoginComponent,FormsModule,DonArgentComponent,DonComponent],
+  imports: [RouterOutlet,NewaccComponent,LoginComponent,FormsModule,DonArgentComponent,DonComponent, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'] 
 })

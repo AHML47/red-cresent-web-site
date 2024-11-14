@@ -1,0 +1,25 @@
+<!-- Header bar structure -->
+<header class="header-bar">
+    <!-- Logo -->
+    <div class="logo">MyLogo</div>
+
+    <!-- Navigation Links -->
+    <nav class="nav-links">
+      <a href="#section1">Section 1</a>
+      <a href="#section2">Section 2</a>
+    </nav>
+
+    <!-- Header Buttons -->
+    <div class="header-buttons">
+
+      <button *ngIf="!isLogin"  class="header-button"  (click)="openLogin()">Login</button>
+      <button class="header-button" (click)="openDon()">Donate</button>
+      <button *ngIf="isLogin"class="header-button" (click)="openUser()">User</button>
+      <button *ngIf="!isLogin"class="header-button" (click)="openSingUp ()">addUser</button>
+    </div>
+  </header>
+  <h1>ktiba</h1>
+  <h2>ktiba o5ra</h2>
+  <!-- Example sections for navigation
+  <section id="section1" style="padding: 50px;">Section 1 Content</section>
+  <section id="section2" style="padding: 50px;">Section 2 Content</section>*/ -->
