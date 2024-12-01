@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" (ngSubmit)="on_sub()">
+        
+            <img>
+            <div class="form">
+                <h1 class="heading">identification</h1>
+                <p>bienvenue sur votre espace donateur veuillez vous identifier pour acceder a votre espace personnel.</p> <br><br>
+                <label *ngIf="error">{{loginError}}</label>
+                <label>votre mail : <input type="mail" class="input" placeholder="abcd@gmail.com" [(ngModel)]="user.email" name="email"></label><br>
+                
+                <label>votre mot de passe: <input type="password" class="input" placeholder="*****" [(ngModel)]="user.password" name="pass" > </label>
+                <button type="submit" class="login-button">login</button>
+                <input type="button" value="s'inscrire" class="login-button" (click)="openSinghn()">
+                <input type="button"  value="Forgot Password?" class="login-button" (click)="resetPassword()">
+            </div>
+        
+    </div>
+   
+  
+
+</body>
+</html>

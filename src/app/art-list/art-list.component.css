@@ -1,0 +1,76 @@
+p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff0000; /* Rouge vif pour correspondre au thème du Croissant-Rouge */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombre subtile pour le titre */
+    text-align: center;
+    margin-top: 75px;
+    margin-bottom: 35px;
+  }
+.scroll-container-wrapper {
+    position: relative; /* Assure que les boutons restent bien positionnés */
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 100%; /* Ajustez selon vos besoins */
+  }
+  
+  .scroll-btn {
+    background-color: #ff0000; /* Rouge vif pour le thème */
+    color: #ffffff; /* Texte en blanc pour le contraste */
+    border: none;
+    border-radius: 50%; /* Boutons arrondis */
+    width: 50px;
+    height: 50px;
+    font-size: 20px; /* Taille du symbole */
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile pour un effet moderne */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .scroll-btn:hover {
+    background-color: #cc0000; /* Rouge légèrement plus foncé au survol */
+    transform: scale(1.1); /* Effet de zoom pour une meilleure interactivité */
+  }
+  
+  .scroll-btn:active {
+    transform: scale(1); /* Retrait du zoom lors du clic */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Réduction de l'ombre */
+  }
+  
+  .left-btn {
+    position: absolute;
+    left: 10px; /* Décalé à gauche */
+    z-index: 10; /* Assure que le bouton est au-dessus de la liste */
+  }
+  
+  .right-btn {
+    position: absolute;
+    right: 10px; /* Décalé à droite */
+    z-index: 10;
+  }
+  
+  .scroll-container {
+    overflow-x: auto; /* Activation du défilement horizontal */
+    white-space: nowrap; /* Les éléments restent sur une ligne */
+    scroll-behavior: smooth; /* Défilement fluide */
+    width: 100%;
+    display: flex;
+  }
+  
+  .horizontal-list {
+    display: flex; /* Les éléments restent sur une ligne */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .horizontal-list li {
+    display: inline-block; /* Les éléments de liste sont alignés horizontalement */
+    margin: 0 10px; /* Espacement entre les articles */
+  }
+  

@@ -1,0 +1,56 @@
+/* Styling the table container */
+table.donations-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    border: 1px solid #dddddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styling table headers */
+  table.donations-table thead {
+    background-color: #f4f4f4;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  table.donations-table th {
+    padding: 12px 15px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+  }
+  
+  /* Styling table rows */
+  table.donations-table tbody tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  table.donations-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  table.donations-table tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Styling table cells */
+  table.donations-table td {
+    padding: 12px 15px;
+    color: #555;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    table.donations-table {
+      font-size: 16px;
+    }
+  
+    table.donations-table th,
+    table.donations-table td {
+      padding: 10px;
+    }
+  }
+  

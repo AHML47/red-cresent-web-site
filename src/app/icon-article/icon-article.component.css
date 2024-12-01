@@ -1,0 +1,41 @@
+.image-button {
+    position: relative;
+    width: 450px;          /* Adjust width as needed */
+    height: 250px;         /* Adjust height as needed */
+    /*background-image: url({{imgURL}});  /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 10px;
+    text-overflow: ellipsis;
+    
+}
+
+/* Add overlay */
+.image-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);  /* Adjust overlay color and opacity */
+    border-radius: 8px;
+}
+
+/* Style the text */
+.image-button span {
+    position: relative;
+    z-index: 1;
+}
+
+.image-button:hover {
+    opacity: 0.9;   /* Optional hover effect */
+}

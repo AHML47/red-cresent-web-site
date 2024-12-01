@@ -1,0 +1,61 @@
+/* Conteneur des formations */
+.formation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .formation-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ff0000;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+  
+  /* Carte de formation */
+  .formation-card {
+    background: linear-gradient(145deg, #f0f0f0, #d9d9d9);
+    border-radius: 14px;
+    width: 80%;
+    max-width: 500px;
+    margin: 10px 0;
+    box-shadow: 6px 6px 12px #d1d1d1, -6px -6px 12px #ffffff;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
+  
+  .formation-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 12px 12px 24px #d1d1d1, -12px -12px 24px #ffffff;
+  }
+  
+  /* Contenu de la carte */
+  .formation-content {
+    text-align: center;
+  }
+  
+  .formation-card-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff0000;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .formation-date, .formation-location {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .formation-date {
+    margin-bottom: 5px;
+  }
+  
+  .formation-location {
+    font-style: italic;
+    color: #555;
+  }
+  

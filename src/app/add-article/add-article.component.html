@@ -1,0 +1,11 @@
+<form style="text-align:center">
+    <h1>article forume</h1>
+    <label for="arTitel">give the title : </label>
+    <input type="text" name="Artitel" [(ngModel)]="arTitel"><br>
+    <label for="arSub">give the subject : </label>
+    <input type="text" name="arSub" [(ngModel)]="arSub"><br>
+    <label > add photo : <input type="file"  (change)="onFileChange($event)" ></label><br>
+    <label for="arText">write you article here : </label>
+    <textarea name="arText" rows="100" cols="100"  [(ngModel)]="arText"></textarea>
+    <button type="submit" (click)="addArticle()">finish</button>
+  </form>

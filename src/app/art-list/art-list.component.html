@@ -1,0 +1,15 @@
+<p>Nos articles: </p>
+<div class="scroll-container-wrapper">
+<button class="scroll-btn left-btn" (click)="scrollLeft()">&#8249;</button>
+<div class="scroll-container" #scrollContainer>
+    
+<ul class="horizontal-list" *ngFor="let article of articeles">
+    <li  *ngIf="article.title">
+      <app-icon-article  titel={{article.title}} subject={{article.subject}} text={{article.text}} imgURL={{article.image}} id={{article}}></app-icon-article>
+      
+    </li>
+  </ul>
+    
+</div>
+<button class="scroll-btn right-btn" (click)="scrollRight()">&#8250;</button>
+</div>

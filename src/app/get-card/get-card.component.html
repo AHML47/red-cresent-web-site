@@ -1,0 +1,24 @@
+
+
+<div class="container">
+    <h2 class="heading">Enter Credit Card Details</h2>
+    <div class="form" (ngSubmit)="sendMony()">
+        <div class="form-group">
+            <label for="card-number">Card Number</label>
+            <input type="text" class="input" id="card-number" placeholder="1234 5678 9012 3456" name="card-number" required [(ngModel)]="donation.cardNum">
+        </div>
+        <div class="form-group">
+            <label for="card-name">Cardholder Name</label>
+            <input type="text" class="input" id="card-name" placeholder="John Doe" name="card-name"  [(ngModel)]="donation.cardHolder" required>
+        </div>
+        <div class="form-group">
+            <label for="expiry-date">Expiry Date</label>
+            <input type="text" class="input" id="expiry-date" placeholder="MM/YY" name="expiry-date"  [(ngModel)]="donation.expiryDate" required>
+        </div>
+        <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="number" class="input" id="cvv" placeholder="123" name="cvv"  [(ngModel)]="donation.cvv" required>
+        </div>
+        <button type="submit" class="login-button">Submit Payment</button>
+    </div>
+</div>

@@ -1,0 +1,119 @@
+/* Conteneur des cartes */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+  }
+  
+  /* Carte */
+  .card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #f0f0f0, #d9d9d9);
+    box-shadow: 6px 6px 12px #d1d1d1, -6px -6px 12px #ffffff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 12px 12px 24px #d1d1d1, -12px -12px 24px #ffffff;
+  }
+  
+  /* Contexte arrière */
+  .bg {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    z-index: 2;
+    background: rgba(255, 176, 176, 0.95);
+    backdrop-filter: blur(24px);
+    border-radius: 10px;
+    overflow: hidden;
+    outline: 2px solid white;
+  }
+  
+  /* Animation du "blob" */
+  .blob {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #ff0000;
+    opacity: 1;
+    filter: blur(12px);
+    animation: blob-bounce 5s infinite ease;
+  }
+  
+  /* Animation */
+  @keyframes blob-bounce {
+    0% {
+      transform: translate(-50%, -50%) translate3d(0, 0, 0);
+    }
+    25% {
+      transform: translate(-50%, -50%) translate3d(100px, 0, 0);
+    }
+    50% {
+      transform: translate(-50%, -50%) translate3d(100px, 100px, 0);
+    }
+    75% {
+      transform: translate(-50%, -50%) translate3d(0, 100px, 0);
+    }
+    100% {
+      transform: translate(-50%, -50%) translate3d(0, 0, 0);
+    }
+  }
+  
+  /* Contenu de la carte */
+  .card-content {
+    text-align: center;
+    z-index: 3;
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #ff0000;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s, text-shadow 0.3s;
+  }
+  
+  .card:hover .card-title {
+    color: #d00000;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Image */
+  .card-image {
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    transition: transform 0.3s, filter 0.3s;
+  }
+  
+  .card:hover .card-image {
+    transform: scale(1.2);
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+  }
+  .photo {
+    display: block; /* Assure que l'image est affichée */
+    width: 100%; /* Ajuste la largeur si nécessaire */
+    max-width: 500px;
+    border-radius: 25px; /* Limite la taille de l'image */
+  }

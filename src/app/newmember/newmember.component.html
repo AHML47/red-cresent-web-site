@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="form" (ngSubmit)="onSubmit()">
+        <h1 class="heading">Rejoins-nous en tant que volontaire ! </h1>
+        
+        <label>Nom : <input type="text" [(ngModel)]="user.nom" name="nom" required class="input"></label><br>
+        <label>Prénom : <input type="text" class="input" [(ngModel)]="user.prenom" name="prenom" required></label><br>
+        <label>Occupation : <input type="text" class="input" [(ngModel)]="user.occupation" name="occupation" required></label><br>
+        <label>Âge : <input type="number" class="input" [(ngModel)]="user.age" name="age" required min="15"></label><br>
+        
+        <label>Niveau d'étude : 
+            <select [(ngModel)]="user.niveauEtude" name="niveauEtude" class="input" required>
+                <option value="" disabled selected>Choisissez votre niveau d'étude</option>
+                <option>Bac</option>
+                <option>Licence</option>
+                <option>Master</option>
+                <option>Doctorat</option>
+                <option>Autre</option>
+            </select>
+        </label><br>
+        
+        <label>Adresse e-mail : <input type="email" class="input" [(ngModel)]="user.email" name="email" required></label><br>
+       <div *ngIf="emailEx"> <label >ce email est deja utiliser </label><br></div>
+       <div *ngIf="emailInvalid"> <label >ce email est invalide </label><br></div>
+        <label>mot de passe : <input type="password" class="input" [(ngModel)]="user.password" name="pass" required> </label><br>
+        <label>Numéro de téléphone : <input type="text" class="input" [(ngModel)]="user.telephone" name="telephone" required></label><br>
+        
+        <label>Gouvernorat :
+            <select [(ngModel)]="user.gouvernorat" (change)="updateCities()" name="gouvernorat" class="input" required>
+                <option value="" disabled selected>Choisissez votre gouvernorat</option>
+                <option *ngFor="let gov of governorates" [value]="gov">{{ gov }}</option>
+            </select>
+        </label><br>
+        
+        <label>Ville :
+            <select [(ngModel)]="user.ville" name="ville" class="input" required>
+                <option value="" disabled selected>Choisissez votre ville</option>
+                <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+            </select>
+        </label><br>
+        
+        <label>Avez-vous un certificat de premiers secours ?</label><br>
+        <label><input type="radio" [(ngModel)]="user.certificat" (change)="toggleCertificateUpload(true)" name="firstAid" value="oui"> Oui</label><br>
+        <label><input type="radio" [(ngModel)]="user.certificat" (change)="toggleCertificateUpload(false)" name="firstAid" value="non"> Non</label><br>
+
+        <div *ngIf="showUpload" class="certificate-upload">
+            <label>Photo du certificat : <input type="file" class="input" (change)="onFileChange($event)"></label>
+        </div><br>
+
+        <button class="login-button" type="submit">Deviens bénévole</button><br>
+    </div>
+</div>
+
+

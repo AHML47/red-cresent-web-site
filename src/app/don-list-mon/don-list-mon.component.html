@@ -1,0 +1,36 @@
+<table class="donations-table">
+    <thead>
+      <tr>
+        <th>Donation ID</th>
+        <th>User ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Card Holder</th>
+        <th>Card Number</th>
+        <th>CVV</th>
+        <th>Expiry Date</th>
+        
+        <th>Amount</th>
+        
+        
+      </tr>
+    </thead>
+    <tbody >
+      <!-- Use *ngFor to iterate over the donnations array -->
+      <tr *ngFor="let don of donnations">
+        <td>{{ don.id }}</td>
+        <td>{{ don.userID }}</td>
+        <td>{{ don.userFirstName }}</td>
+        <td>{{ don.userLastName }}</td>
+        <td>{{ don.cardHolder }}</td>
+        <td>{{ don.cardNum }}</td>
+        <td>{{ don.cvv }}</td>
+        <td>{{ don.expiryDate }}</td>
+        
+        <td>{{ don.montant }}</td>
+        
+        
+      </tr>
+    </tbody>
+  </table>
+  
