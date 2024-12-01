@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 import { GetCardComponent } from '../get-card/get-card.component';
 import { RouterLink } from '@angular/router';
 import { SideNavComponent } from "../side-nav/side-nav.component";
+import { DonComponent } from '../don/don.component';
 //import { DonHolderComponent } from '../don-holder/don-holder.component';
 
 @Component({
@@ -21,67 +22,45 @@ import { SideNavComponent } from "../side-nav/side-nav.component";
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  isSidebarVisible=false;
-  LoginIsOpen = false;
-  DonationIsOpen = false;
-  isLogin:boolean=true;
-  constructor(private matDialog: MatDialog,private authService: AuthService) { }
-  
+  isSidebarVisible = false;
+  isLogin: boolean = false;
 
-  toggleSidebar(){
-    this.isSidebarVisible = !this.isSidebarVisible;
-  }
+  constructor(private matDialog: MatDialog, private authService: AuthService) {}
+
   ngOnInit(): void {
     this.authService.user$.subscribe(user => {
-      this.isLogin = !!user; // Update based on user presence
+      this.isLogin = !!user;
     });
   }
 
+  toggleSidebar(): void {
+    this.isSidebarVisible = !this.isSidebarVisible;
+  }
 
-
-
-  openLogin() {
-    let dialogLogin= this.matDialog.open(LoginComponent,{
-      
-    });
+  openLogin(): void {
+    const dialogLogin = this.matDialog.open(LoginComponent);
     dialogLogin.afterClosed().subscribe(data => {
-      if(data == "open sighn in"){
-        this.openSingUp()
-      } else if(data == "open resend pass"){
-        this.openReInitPass()
-      } else {
-        this.isLogin=data;
+      if (data === "login successful") {
+        this.isLogin = true;
       }
-      
-    })
-  }
-
-  openDon() {
-    this.matDialog.open(DonArgentComponent, {
-      // speciq desine 
     });
-
   }
-  openUser() {
-    const openUser= this.matDialog.open(ShowUserComponent);
-    openUser.afterClosed().subscribe(data => {
-      if(data =="sLogin" ){
-        this.isLogin =true ;
+
+  openDon(): void {
+    this.matDialog.open(DonComponent);
+  }
+
+  openUser(): void {
+    const dialogUser = this.matDialog.open(NewaccComponent);
+    dialogUser.afterClosed().subscribe(data => {
+      if (data === "logout") {
+        this.isLogin = false;
       }
-      else if (data =="logout"){this.isLogin =false ;}
-      console.log(this.isLogin);
-    })
-
+    });
   }
-  openSingUp(){
-   const modalSin =  this.matDialog.open(NewaccComponent);
-   modalSin.afterClosed().subscribe(data => {
 
-    if(data=="sebon login"){this.isLogin =true ;}
-   })
+  openSingUp(): void {
+    this.matDialog.open(LoginComponent);
   }
-   openReInitPass(){
-    const modalReInit =  this.matDialog.open(ResetpassComponent);
-   }
   
 }

@@ -1,28 +1,27 @@
-<!-- Header bar structure -->
 <header class="header-bar">
-    <!-- Logo -->
-    <button class="toggle-button" (click)="toggleSidebar()">
-      &#9776; <!-- Unicode for the three-line "hamburger" icon -->
-    </button>
-    <div class="photo">
-      <img  src="../../assets/logo.png" class="logo" alt="logo">
-    </div>
+  <!-- Toggle Button -->
+  <button class="toggle-button" (click)="toggleSidebar()">
+    &#9776; <!-- Unicode for the three-line "hamburger" icon -->
+  </button>
 
-   
-
-    <!-- Header Buttons -->
-    <div class="header-buttons">
-
-      <button *ngIf="!isLogin"  class="header-button"  (click)="openLogin()">Login</button>
-      <button class="header-button" (click)="openDon()">Donate</button>
-      <button *ngIf="isLogin"class="header-button" (click)="openUser()">User</button>
-      <button *ngIf="!isLogin"class="header-button" (click)="openSingUp ()">addUser</button>
-    </div>
-  </header>
-  <div class="sidebar" [class.visible]="isSidebarVisible">
-<app-side-nav></app-side-nav>
+  <!-- Logo and Title -->
+  <div class="photo">
+    <img src="../../assets/logo.png" class="logo" alt="logo">
   </div>
-  
-  <!-- Example sections for navigation
-  <section id="section1" style="padding: 50px;">Section 1 Content</section>
-  <section id="section2" style="padding: 50px;">Section 2 Content</section>*/ -->
+
+  <div class="site-title">
+    Red Crescent Organization <!-- Nom du site -->
+  </div>
+
+  <!-- Header Buttons -->
+  <div class="header-buttons">
+    <button *ngIf="!isLogin" class="header-button" (click)="openLogin()">Login</button>
+    <button class="header-button" (click)="openDon()">Donate</button>
+    <button *ngIf="isLogin" class="header-button" (click)="openUser()">User</button>
+    <button *ngIf="!isLogin" class="header-button" (click)="openSingUp()">Add User</button>
+  </div>
+</header>
+<div class="sidebar" [class.visible]="isSidebarVisible">
+ <app-side-nav></app-side-nav> 
+</div>
+<div *ngIf="isSidebarVisible" class="sidebar-overlay" (click)="toggleSidebar()"></div>

@@ -1,19 +1,21 @@
 
-
-    <h3>Name: {{ user.nom }}</h3>
-    <h3>First Name: {{ user.prenom }}</h3>
-    <h3>Occupation: {{ user.occupation }}</h3>
-    <h3>Age: {{ user.age }}</h3>
-    <h3>Education Level: {{ user.niveauEtude }}</h3>
-    <h3>Email: {{ user.email }}</h3>
-    <h3>Telephone: {{ user.telephone }}</h3>
-    <h3>Governorate: {{ user.gouvernorat }}</h3>
-    <h3>City: {{ user.ville }}</h3>
-    <button (click)="closeModal()">close</button>
-    <button (click)="logOut()">logOut</button>
+<div class="container">
+  <div class="form">
+    <label>Name: {{ user.nom }}</label><br>
+    <label>First Name: {{ user.prenom }}</label><br>
+    <label>Occupation: {{ user.occupation }}</label><br>
+    <label>Age: {{ user.age }}</label><br>
+    <label>Education Level: {{ user.niveauEtude }}</label><br>
+    <label>Email: {{ user.email }}</label><br>
+    <label>Telephone: {{ user.telephone }}</label><br>
+    <label>Governorate: {{ user.gouvernorat }}</label><br>
+    <label>City: {{ user.ville }}</label><br>
+    <button (click)="closeModal()" class="login-button">close</button>
+    <button (click)="logOut()" class="login-button">logOut</button>
   
-  <button *ngIf="user.is_add" (click)="openAdd()" routerLink="/adminCont">admin Control</button>
-
+  <button *ngIf="user.is_add" class="login-button" (click)="openAdd()" routerLink="/adminCont">admin Control</button>
+</div>
+</div>
 
 
 
