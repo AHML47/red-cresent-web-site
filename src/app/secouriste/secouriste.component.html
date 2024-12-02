@@ -1,0 +1,60 @@
+<div class="container">
+    <img src="../../assets/first-aid.jpg" alt="Formation de secourisme" class="form-image">
+    <div class="form">
+      <h1 class="heading">Deviens Secouriste!</h1>
+  
+      <!-- Champ pour le nom -->
+      <label for="name">Votre nom : 
+        <input 
+          type="text" 
+          id="name" 
+          class="input" 
+          name="name" 
+          [(ngModel)]="participant.name" 
+          required 
+          placeholder="Nom complet">
+      </label>
+  
+      <!-- Champ pour l'email -->
+      <label for="email">Votre email : 
+        <input 
+          type="email" 
+          id="email" 
+          class="input" 
+          name="email" 
+          [(ngModel)]="participant.email" 
+          required 
+          placeholder="abcd@gmail.com">
+      </label>
+  
+      <!-- Champ pour le numéro de téléphone -->
+      <label for="phone">Votre numéro de téléphone : 
+        <input 
+          type="tel" 
+          id="phone" 
+          class="input" 
+          name="phone" 
+          [(ngModel)]="participant.phone" 
+          required 
+          placeholder="20123456">
+      </label>
+  
+      <!-- Sélection de la formation -->
+      <label for="formation">Les formations disponibles :</label>
+      <select 
+        id="formation" 
+        class="input" 
+        name="formation" 
+        [(ngModel)]="participant.formation" 
+        required>
+        <option value="" disabled selected>Choisissez une formation</option>
+        <option *ngFor="let formation of formations" [value]="formation">{{ formation }}</option>
+      </select>
+  
+      <!-- Bouton de soumission -->
+      <button type="submit" class="login-button">
+        Participer
+      </button>
+    </div>
+  </div>
+  

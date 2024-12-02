@@ -15,11 +15,13 @@
 
   <!-- Header Buttons -->
   <div class="header-buttons">
+
     <button class="header-button" (click)="openDon()">faire un don</button>
     <button *ngIf="!isLogin" class="header-button" (click)="openLogin()">se connecter</button>
     
     <button *ngIf="isLogin" class="header-button" (click)="openUser()">compte</button>
     <button *ngIf="!isLogin" class="header-button" (click)="openSingUp()">créer un compte</button>
+
   </div>
 </header>
 <div class="sidebar" [class.visible]="isSidebarVisible">
