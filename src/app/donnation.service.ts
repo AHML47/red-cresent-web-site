@@ -10,7 +10,7 @@ import { getFirestore,collection,CollectionReference,getDocs, doc, setDoc,getDoc
 export class DonnationService {
 
   constructor(private authService: AuthService) { }
-  public async getUserFirstName() : Promise<String>{
+  public async getUserFirstName() : Promise<string>{
     if(this.authService.getUserId()){
     const  app = initializeApp(firebaseConfig);
     const  database = getFirestore(app);

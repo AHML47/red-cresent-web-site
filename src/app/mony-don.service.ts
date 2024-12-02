@@ -6,12 +6,14 @@ import { FormsModule } from '@angular/forms';
 import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore';
 import { collection, doc, setDoc, getDoc } from "firebase/firestore";
+import { SecurityService } from './security.service';
+
 @Injectable({
   providedIn: 'root'
 })
 export class MonyDonService {
 
-  constructor(private don: DonnationService) { }
+  constructor(private don: DonnationService,private s:SecurityService) { }
   monyDon ={
     id:'',
     montant:'',
@@ -43,15 +45,15 @@ export class MonyDonService {
     console.log(this.don.getUserFirstName());
     await setDoc(doc(this.donColl, this.monyDon.id), {
       
-      userFirstName:await this.don.getUserFirstName(),
-      userLastName:await  this.don.getUserLastName() ,
-      userID:await this.don.getUserId(),
-      cardNum: this.monyDon.cardNum,
-      cardHolder: this.monyDon.cardHolder,
-      expiryDate: this.monyDon.expiryDate,
-      cvv: this.monyDon.cvv,
-      montant: this.monyDon.montant,
-      id: this.monyDon.id
+      userFirstName:        this.s.encryptData(await this.don.getUserFirstName()),
+      userLastName:         this.s.encryptData(await  this.don.getUserLastName()) ,
+      userID:               this.s.encryptData(await this.don.getUserId()),
+      cardNum:              this.s.encryptData(this.monyDon.cardNum),
+      cardHolder:           this.s.encryptData(this.monyDon.cardHolder),
+      expiryDate:           this.s.encryptData(this.monyDon.expiryDate),
+      cvv:                  this.s.encryptData(this.monyDon.cvv),
+      montant:              this.s.encryptData(this.monyDon.montant),
+      id:                   this.s.encryptData(this.monyDon.id)
     });
     await setDoc(doc(this.donColl,"id"),{
       next_id:(Number(this.monyDon.id)+1).toString()

@@ -142,3 +142,9 @@ body {
   background: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
+
+.modal-content {
+  max-height: 80vh; /* Allow the modal to grow up to 80% of the viewport height */
+  overflow-y: auto; /* Add scroll if content exceeds height */
+}
+

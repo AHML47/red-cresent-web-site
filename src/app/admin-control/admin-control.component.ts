@@ -5,10 +5,11 @@ import { AddArticleComponent } from '../add-article/add-article.component';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MainPageComponent } from '../main-page/main-page.component';
 import { RouterLink } from '@angular/router';
+import { ListMessageComponent } from '../list-message/list-message.component';
 @Component({
   selector: 'app-admin-control',
   standalone: true,
-  imports: [RouterLink,MainPageComponent,DonListMonComponent,DonListPhyComponent,AddArticleComponent],
+  imports: [RouterLink,ListMessageComponent,DonListMonComponent,DonListPhyComponent,AddArticleComponent],
   templateUrl: './admin-control.component.html',
   styleUrl: './admin-control.component.css'
 })

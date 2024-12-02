@@ -5,6 +5,7 @@ import { collection, doc, setDoc, getDocs } from "firebase/firestore";
 import {firebaseConfig} from "../environments/environment";
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { SecurityService } from '../security.service';
 @Component({
   selector: 'app-don-list-mon',
   standalone: true,
@@ -13,7 +14,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './don-list-mon.component.css'
 })
 export class DonListMonComponent {
-  constructor() {}
+  constructor(private s:SecurityService) {}
   donnations: donnation[] = [];
 
   app=initializeApp(firebaseConfig);
@@ -26,6 +27,13 @@ export class DonListMonComponent {
    const a = await getDocs(this.collectionRef) ;
    this.donnations = a.docs.map(doc => ({ lid: doc.id, ...doc.data() as donnation}))
     console.log(this.donnations);
+
+    
+  
+    console.log(this.donnations);
+  }
+  decrypt(x:string){
+    return this.s.decryptData(x);
   }
 
 }

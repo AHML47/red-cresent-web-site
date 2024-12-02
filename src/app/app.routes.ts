@@ -9,6 +9,10 @@ import { NewmemberComponent } from './newmember/newmember.component';
 import { ElementsComponent } from './elements/elements.component';
 import { DonComponent } from './don/don.component';
 import { FormationComponent } from './formation/formation.component';
+import { ArtBigListComponent } from './art-big-list/art-big-list.component';
+import { NewaccComponent } from './newacc/newacc.component';
+
+
 export const routes: Routes = [
     {path:'login',component:LoginComponent},
     {path:'donArgent',component:DonArgentComponent},
@@ -18,6 +22,7 @@ export const routes: Routes = [
     {path: 'adminCont',component:AdminControlComponent},
     {path: 'showArt',component:ShowArticleComponent},
     {path: 'newmember',component:NewmemberComponent},
+    {path: 'artList',component:ArtBigListComponent},
     { path: 'elements', component: ElementsComponent },
   { path: 'don', component: DonComponent },
   { path: 'formation', component: FormationComponent },

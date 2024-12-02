@@ -35,7 +35,7 @@
     <div *ngIf="showForm" class="form-modal">
       <div class="form-container">
         <h3>Envoyer un message</h3>
-        <div (submit)="submitMessage()">
+        <div>
           <label for="name">Nom :</label>
           <input type="text" id="name" [(ngModel)]="name" name="name" required />
           
@@ -45,7 +45,7 @@
           <label for="message">Message :</label>
           <textarea id="message" [(ngModel)]="message" name="message" required></textarea>
           
-          <button type="submit">Envoyer</button>
+          <button type="submit" (click)="submitMessage()">Envoyer</button>
           <button type="button" (click)="closeForm()">Fermer</button>
         </div>
       </div>

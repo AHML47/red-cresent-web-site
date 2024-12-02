@@ -1,0 +1,20 @@
+<table class="donations-table">
+    <thead>
+      <tr>
+        <th>Message ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Use *ngFor to iterate over the message array -->
+      <tr *ngFor="let msg of message">
+        <td>{{ msg.id }}</td>
+        <td>{{ msg.Nom}}</td>
+        <td>{{ msg.Email }}</td>
+        <td>{{ msg.Message }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
