@@ -7,6 +7,8 @@
     border: 5px solid rgb(255, 255, 255);
     box-shadow: rgba(215, 133, 133, 0.878) 0px 30px 30px -20px;
     margin: 20px;
+    overflow: hidden;
+     
   }
   
   .heading {
@@ -17,6 +19,9 @@
   }
   
   .form {
+    max-height: calc(100vh - 40px); /* Limite pour ne pas dépasser la hauteur de l'écran */
+  overflow-y: auto; 
+ 
     margin-top: 20px;
   }
   

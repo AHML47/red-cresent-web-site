@@ -47,7 +47,7 @@ export class HeaderComponent {
   }
 
   openDon(): void {
-    this.matDialog.open(DonComponent);
+    this.matDialog.open(DonArgentComponent);
   }
 
   openUser(): void {
@@ -60,7 +60,7 @@ export class HeaderComponent {
   }
 
   openSingUp(): void {
-    this.matDialog.open(LoginComponent);
+    this.matDialog.open(NewaccComponent);
   }
   
 }
