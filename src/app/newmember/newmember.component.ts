@@ -5,23 +5,21 @@ import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword ,fetchSignInMethodsForEmail } from "firebase/auth";
 import { collection, doc, setDoc } from "firebase/firestore";
 import {firebaseConfig} from "../environments/environment";
-import firebase from 'firebase/compat/app';
 import { getFirestore } from 'firebase/firestore';
 import { getStorage , ref , uploadBytes} from "firebase/storage";
-import { MatDialogRef } from '@angular/material/dialog';
 import { AuthService} from '../auth.service';
 import { FirebaseError } from 'firebase/app';
 
 
 @Component({ 
-  selector: 'app-newacc',
+  selector: 'app-newmem',
   standalone: true,
   imports: [FormsModule, CommonModule],
   templateUrl: './newmember.component.html',
   styleUrls: ['./newmember.component.css']
 })
 export class NewmemberComponent {
-  constructor (public dialogRef: MatDialogRef<NewmemberComponent>,private authService: AuthService){};
+  constructor (private authService: AuthService){};
   
   user = {
     id: '',
@@ -145,7 +143,7 @@ export class NewmemberComponent {
       throw error;   
     }
     this.login();
-    this.dialogRef.close("sebon login");
+    
   }
   async login(){
     try {

@@ -34,7 +34,12 @@ export class DonArgentComponent {
 // win psplt a5er marra : l id tkoun document fe wast l collection w fel fieled el id jaya kol type article /donnation 3endo l id document mta3o 
   sendMony(){
     this.sendSer.setMonatn(this.montant);
-    this.matDialog.open(GetCardComponent);
+    this.matDialog.open(GetCardComponent,{
+      width: '80%', // Set width as a percentage of the viewport or use px (e.g., '600px')
+  height: '80%', // Set height as a percentage of the viewport or use px (e.g., '600px')
+  maxWidth: '800px', // Optional: set a maximum width if you want to constrain the width
+  maxHeight: '75vh',
+    });
     this.dialogRef.close();
   }
 }

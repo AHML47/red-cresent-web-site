@@ -4,7 +4,8 @@ p {
     color: #ff0000; /* Rouge vif pour correspondre au thème du Croissant-Rouge */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombre subtile pour le titre */
     text-align: center;
-    margin-top: 75px;
+    margin-top: 105px;
+    padding-top: 45px;
     margin-bottom: 35px;
   }
 .scroll-container-wrapper {

@@ -1,158 +1,148 @@
-/* Reset default margins and padding */
-* {height: 500;
-    margin: 200;
-    padding-top: 270px;
-    box-sizing: border-box;
-    z-index: 500;
-    
-     
-     /*
-      height: 300px;
-      width: 100%;*/
-    
-    
-  }
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  /* Header bar styling */
-  .header-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #333;
-    background: linear-gradient(45deg, rgb(246, 73, 73) 0%, rgb(227, 171, 171) 100%);
-    color: #fff;
-    padding: 15px 30px;
-    padding-bottom: 10px;
-    font-family: Arial, sans-serif;
-    background-image: 
-    linear-gradient(to bottom, rgba(249, 225, 225, 0.5), rgba(255, 0, 0, 0.8)), 
-    url('../images/back.png');
-  background-size:cover;
-  background-position: center;
-  position: relative; 
- 
-  }
-/* Optional: Center the dialog if it's not appearing centered */
-/*.mat-dialog-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-*/  
-  /* Logo styling */
- img{
-    display: block; /* Assure que l'image est affichée */
-    height: 25px;
-    width: 25px;
-    max-width: 250px;
-    position: absolute;
-    /* Limite la taille de l'image */
-  }
-  /* Navigation links styling */
-  .nav-links {
-    display: flex;
-    gap: 20px;
-  }
-  
+/* Header Bar */
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:55px 55px; /* Augment padding for a larger header */
+  background: linear-gradient(45deg, #f64949, #e3abab);
+  color: #fff;
+  position: fixed; /* Fixed to stay at the top */
+  top: 0; /* Ensure the header stays at the very top */
+  left: 0; /* Align the header to the left */
+  width: 100%; /* Ensure the header spans the entire width */
+  z-index: 1000; /* Ensure it stays above other content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Image background */
+  background-size: cover; /* Cover the entire background */
+  background-position: center; /* Center the background image */
+  height: 80px; /* Set height for the header */
+}
 
-  .nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-  }
+/* Adding margin to the body content to avoid overlap */
+body {
+  padding-top: 80px; /* Adjust according to the header height */
+}
 
-  
-  .header-buttons {
-    display: flex;
-    gap: 10px;
-    padding: 5px;
-    margin-bottom: 5px;
-    position: absolute; /* Absolute positioning */
-    bottom: 0; /* Align to the bottom */
-    right: 0; /* Align to the right */
-    margin-bottom: 15px; /* Add some space between buttons and the bottom */
-  }
-
-  .header-button {
-    background-color: #f0ad4e;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-
-  .header-button:hover {
-    background-color: #ec971f;
-  }
-
-
-/* Fix the toggle button (hamburger icon) to the bottom-left corner */
+/* Toggle Button */
 .toggle-button {
   background: none;
   border: none;
-  color: rgb(255, 255, 255);
-  font-size: 1.5rem;
+  color: #fff;
+  font-size: 24px;
   cursor: pointer;
-  display: flex;
-  position: fixed; /* Fixed positioning */
-  bottom: 20px; /* Adjust this value to move the button up or down */
-  left: 20px; /* Adjust this value to move the button from the left */
-  z-index: 1000; /* Ensure it stays above other elements */
-  margin-bottom: 445px;
+  position: relative;
 }
 
-  .toggle-button:focus {
-    outline: none;
-  }
-  .toggle-button:hover{
-    transform: scale(1.03);
-    color: #444;
+.toggle-button:focus {
+  outline: none;
+}
 
-    
+.toggle-button:hover {
+  transform: scale(1.1);
+  color: #444;
+}
 
+/* Logo */
+.photo img {
+  height: 75px;
+  width: 75px;
+}
 
-  }
-  
-  /* Sidebar styles */
-  .sidebar {
-    width: 250px;
-    background-color: #444;
-    color: white;
-    height: 100%;
-    padding: 1rem;
-    position: fixed;
-    top: 50px;
-    left: -250px; /* Initially hidden */
-    transition: left 0.3s ease;
-  }
-  
-  .sidebar.visible {
-    left: 0; /* Show sidebar when visible */
-  }
-  .header-button {
-    display: block;
-    width: 100%;
-    font-weight: bold;
-    background: linear-gradient(45deg, rgb(207, 1, 1) 0%, rgb(227, 171, 171) 100%);
-    color: white;
-    padding: 10px 20px;
-    margin: 20px auto;
-    border-radius: 20px;
-    box-shadow: rgba(229, 119, 119, 0.878) 0px 20px 10px -15px;
-    border: none;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .header-button:hover {
-    transform: scale(1.03);
-    box-shadow: rgba(251, 172, 172, 0.878) 0px 23px 10px -20px;
-    color: #444;
-  }
-  
-  .header-button:active {
-    transform: scale(0.95);
-    box-shadow: rgba(233, 140, 140, 0.878) 0px 15px 10px -10px;
-  }
+/* Title */
+.site-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Text shadow for better visibility */
+  margin-left: 10px;
+}
+
+/* Header Buttons */
+.header-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.header-button {
+  padding: 8px 16px;
+  background: linear-gradient(45deg, #cf0101, #e3abab);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.header-button:hover {
+  transform: scale(1.05);
+  background: #e05454;
+}
+
+.header-button:active {
+  transform: scale(0.95);
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 0, 0, 0.8), rgba(227, 171, 171, 0.9));
+  color: white;
+  padding: 20px;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Visible Sidebar */
+.sidebar.visible {
+  left: 0;
+}
+
+/* Sidebar Links */
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin: 1rem 0;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  padding: 8px;
+  transition: background 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Sidebar Overlay */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.modal-content {
+  max-height: 80vh; /* Allow the modal to grow up to 80% of the viewport height */
+  overflow-y: auto; /* Add scroll if content exceeds height */
+}

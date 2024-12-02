@@ -18,16 +18,17 @@
     <tbody >
       <!-- Use *ngFor to iterate over the donnations array -->
       <tr *ngFor="let don of donnations">
-        <td>{{ don.id }}</td>
-        <td>{{ don.userID }}</td>
-        <td>{{ don.userFirstName }}</td>
-        <td>{{ don.userLastName }}</td>
-        <td>{{ don.cardHolder }}</td>
-        <td>{{ don.cardNum }}</td>
-        <td>{{ don.cvv }}</td>
-        <td>{{ don.expiryDate }}</td>
+        <td>{{ decrypt(don.id) }}</td>
+        <td>{{ decrypt(don.userID) }}</td>
+        <td>{{ decrypt(don.userFirstName) }}</td>
+        <td>{{ decrypt(don.userLastName) }}</td>
+        <td>{{ decrypt(don.cardHolder) }}</td>
+        <td>{{ decrypt(don.cardNum) }}</td>
+        <td>{{ decrypt(don.cvv) }}</td>
+        <td>{{ decrypt(don.expiryDate) }}</td>
         
-        <td>{{ don.montant }}</td>
+        <td>{{ decrypt(don.montant) }}</td>
+        
         
         
       </tr>

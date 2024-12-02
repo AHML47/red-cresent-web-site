@@ -74,7 +74,13 @@ export class HeaderComponent {
 
   }
   openSingUp(){
-   const modalSin =  this.matDialog.open(NewaccComponent);
+   const modalSin =  this.matDialog.open(NewaccComponent,{
+    
+  height: 'auto',
+  maxHeight: '100vh', // Restrict height to 80% of the viewport
+  panelClass: 'custom-dialog-container', // Custom class for styling
+   // Prevent background scrolling
+   });
    modalSin.afterClosed().subscribe(data => {
 
     if(data=="sebon login"){this.isLogin =true ;}

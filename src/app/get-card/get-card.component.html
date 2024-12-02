@@ -2,7 +2,7 @@
 
 <div class="container">
     <h2 class="heading">Enter Credit Card Details</h2>
-    <div class="form" (ngSubmit)="sendMony()">
+    <div class="form" >
         <div class="form-group">
             <label for="card-number">Card Number</label>
             <input type="text" class="input" id="card-number" placeholder="1234 5678 9012 3456" name="card-number" required [(ngModel)]="donation.cardNum">
@@ -19,6 +19,6 @@
             <label for="cvv">CVV</label>
             <input type="number" class="input" id="cvv" placeholder="123" name="cvv"  [(ngModel)]="donation.cvv" required>
         </div>
-        <button type="submit" class="login-button">Submit Payment</button>
+        <button type="submit" class="login-button" (click)="sendMony()">Submit Payment</button>
     </div>
 </div>
