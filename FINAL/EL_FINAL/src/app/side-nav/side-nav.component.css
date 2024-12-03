@@ -1,0 +1,39 @@
+
+/* Liste des liens */
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Élément de liste */
+.sidebar-menu li {
+  margin: 1rem 0; /* Espacement entre les éléments */
+  padding: 10px 0; /* Espacement interne */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Légère séparation entre les éléments */
+}
+
+/* Liens dans la sidebar */
+.sidebar-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  padding: 10px 20px; /* Espacement interne pour plus de confort */
+  border-radius: 5px; /* Coins arrondis pour chaque lien */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transition fluide pour le survol */
+}
+
+/* Effet au survol */
+.sidebar-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Légère teinte au survol */
+  transform: scale(1.05); /* Animation d'agrandissement */
+  text-decoration: none;
+}
+
+/* Lien actif */
+.sidebar-menu a.active {
+  background-color: rgba(255, 255, 255, 0.2); /* Fond plus prononcé pour l'élément actif */
+  font-weight: bold; /* Texte en gras pour l'élément actif */
+  border-left: 4px solid #f64949; /* Bordure rouge à gauche pour l'élément actif */
+}

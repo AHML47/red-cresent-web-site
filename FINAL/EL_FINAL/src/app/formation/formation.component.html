@@ -1,0 +1,13 @@
+<div class="formation-container">
+    <h1 class="formation-title">Nos Formations</h1>
+    
+    <div *ngFor="let formation of formations" >
+      <div class="formation-card" *ngIf="!formation.hide && formation.title">
+      <div class="formation-content" >
+        <h2 class="formation-card-title">{{ formation.title }}</h2>
+        <p class="formation-date">Date: {{ formation.date }}</p>
+        <p class="formation-location">Lieu: {{ formation.location }}</p>
+      </div>
+    </div>
+    </div>
+  </div>

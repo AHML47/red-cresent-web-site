@@ -1,0 +1,19 @@
+<table class="donations-table">
+    <thead>
+      <tr>
+        <th>ID de l'Article</th>
+        <th>Nom de l'Article</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Use *ngFor to iterate over the articles array -->
+      <tr *ngFor="let article of articeles">
+        <td *ngIf="article.id">{{ article.id }}</td>
+        <td *ngIf="article.id">{{ article.title }}</td>
+        <td *ngIf="article.id"><button  (click)="hideArt(article.title)" [ngClass]="getclass(article.title)" name="btn">Cacher</button><button  (click)="removeArt(article.title)" [ngClass]="getclass2(article.title)" name="btn">liste rapide</button></td>
+        
+      </tr>
+    </tbody>
+  </table>
+  

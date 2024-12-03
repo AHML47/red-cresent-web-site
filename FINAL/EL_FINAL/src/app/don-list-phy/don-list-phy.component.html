@@ -1,0 +1,31 @@
+<table class="donations-table">
+  <thead>
+    <tr>
+      <th>ID de Don</th>
+      <th>ID Utilisateur</th>
+      <th>Prénom</th>
+      <th>Nom</th>
+      <th>Adresse</th>
+      <th>Gouvernorat</th>
+      <th>Téléphone</th>
+      <th>Ville</th>
+      <th>Type</th>
+    </tr>
+  </thead>
+  
+    <tbody>
+      <!-- Use *ngFor to iterate over the donnations array -->
+      <tr *ngFor="let don of donnations">
+        <td>{{ don.id }}</td>
+        <td>{{ don.userID }}</td>
+        <td>{{ don.userFirstName }}</td>
+        <td>{{ don.userLastName }}</td>
+        <td>{{ don.adresse }}</td>
+        <td>{{ don.gouvernorat }}</td>
+        <td>{{ don.telephone }}</td>
+        <td>{{ don.ville }}</td>
+        <td>{{ don.type }}</td>
+      </tr>
+    </tbody>
+  </table>
+  

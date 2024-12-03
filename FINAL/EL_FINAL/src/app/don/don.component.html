@@ -1,0 +1,37 @@
+
+<div class="container" (ngSubmit)="onSubmit()">
+    <div class="form">
+        <h1 class="heading">Faire un Don</h1>
+        <label>Selectionner le plus près local de croissant rouge de votre localisation :</label><br><br>
+        
+        <label>Gouvernorat :
+            <select [(ngModel)]="user.gouvernorat" (change)="updateCities()" name="gouvernorat" class="input" required>
+                <option value="" disabled selected>Choisissez votre gouvernorat</option>
+                <option *ngFor="let gov of governorates" [value]="gov">{{ gov }}</option>
+            </select>
+        </label>
++
+        <label>Ville :
+            <select [(ngModel)]="user.ville" name="ville" class="input" required>
+                <option value="" disabled selected>Choisissez votre ville</option>
+                <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+            </select>
+        </label>
+        
+        <label>Votre adresse exacte : 
+            <textarea [(ngModel)]="user.adresse" name="adresse" class="input" required></textarea>
+        </label><br><br>
+        
+        <label>Votre contact : 
+            <input type="text" [(ngModel)]="user.telephone" class="input" name="telephone" placeholder="Votre numéro de téléphone" required>
+        </label><br><br>
+        
+        <label>Type du don : 
+            <input type="text" [(ngModel)]="user.type" class="input" name="type" placeholder="Vêtements, aide médicale, aide alimentaire....." required>
+        </label><br><br>
+        
+        <button type="button" class="login-button" (click)="onSubmit()">Envoyer mes données</button>
+    </div>
+</div>
+
+<p *ngIf="showMessage" class="message">Attendez notre appel le plus tôt possible.</p>

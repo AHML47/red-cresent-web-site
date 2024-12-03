@@ -1,0 +1,11 @@
+.hader {
+    position: fixed; /* Fix the header at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .main {
+    margin-top: 150px; /* Match this value with the height of the header */
+  }

@@ -1,0 +1,22 @@
+*{background-color: bisque;}
+.about-us-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0; /* Optionnel : espace autour */
+  }
+  app-art-list{
+    margin-top: 575px;
+    
+  }
+  
+  app-about-us {
+    max-height: 900px;
+    max-width: 800px; /* Optionnel : Limite la largeur */
+    width: 100%; /* S'adapte à la taille du conteneur */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre pour l'esthétique */
+    padding: 10px; /* Ajoute un espacement interne */
+    border-radius: 10px; /* Coins arrondis */
+    background-color: #f8f4f6; /* Fond blanc */
+  }
+  

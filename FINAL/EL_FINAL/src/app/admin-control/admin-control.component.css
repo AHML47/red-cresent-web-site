@@ -1,0 +1,77 @@
+/* Global Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff5f5;
+    color: #333;
+  }
+  
+  /* Titles Styling */
+  h1 {
+    font-size: 28px;
+    color: #d00000;
+    text-align: center;
+    margin: 20px 0;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Buttons Styling */
+  button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #d00000;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #b00000;
+    transform: scale(1.05);
+  }
+  
+  button:active {
+    background-color: #ff0000;
+    transform: scale(0.95);
+  }
+  
+  /* Component Containers */
+  app-don-list-mon,
+  app-don-list-phy,
+  app-add-article {
+    display: block;
+    margin: 20px auto;
+    
+    
+    
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 24px;
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  
+    app-don-list-mon,
+    app-don-list-phy,
+    app-add-article {
+      padding: 15px;
+    }
+  }
+  

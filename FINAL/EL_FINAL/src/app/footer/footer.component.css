@@ -1,0 +1,135 @@
+/* Style général du footer */
+.footer-container {
+    background-color: #222;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff0000;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info {
+    margin-bottom: 20px;
+  }
+  
+  .info-item {
+    margin: 10px 0;
+  }
+  
+  .info-title {
+    font-weight: bold;
+    display: block;
+    color: #ff0000;
+    margin-bottom: 5px;
+  }
+  
+  .info-details {
+    font-size: 1rem;
+    color: #ddd;
+  }
+  
+  .info-details a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .info-details a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Style du bouton pour afficher le formulaire */
+  .footer-btn button {
+    background-color: #ff0000;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .footer-btn button:hover {
+    background-color: #d00000;
+  }
+  
+  /* Style du modal (formulaire) */
+  .form-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .form-container {
+    max-width: 350px;
+    background: #F8F9FD;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
+    border-radius: 40px;
+    padding: 55px 55px;
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: rgba(215, 133, 133, 0.878) 0px 30px 30px -20px;
+    margin: 20px;
+  }
+  
+  .form-container h3 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+    color: rgb(211, 23, 16);
+  }
+  
+ .form-container label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  .form-container input,
+  .form-container textarea {
+    width: 100%;
+    background: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-top: 15px;
+    box-shadow: #efc6c6 0px 10px 10px -5px;
+    border-inline: 2px solid transparent;
+  }
+  
+  .form-container button {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    background: linear-gradient(45deg, rgb(241, 12, 12) 0%, rgb(227, 171, 171) 100%);
+    color: white;
+    padding-block: 15px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: rgba(229, 119, 119, 0.878) 0px 20px 10px -15px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .form-container button:hover {
+    transform: scale(1.03);
+    box-shadow: rgba(251, 172, 172, 0.878) 0px 23px 10px -20px;
+  }
+  
+ 

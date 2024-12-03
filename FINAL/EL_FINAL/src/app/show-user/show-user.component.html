@@ -1,0 +1,22 @@
+
+<div class="container">
+  <div class="form">
+    <label>Nom : {{ user.nom }}</label><br>
+    <label>Prénom : {{ user.prenom }}</label><br>
+    <label>Profession : {{ user.occupation }}</label><br>
+    <label>Âge : {{ user.age }}</label><br>
+    <label>Niveau d'Études : {{ user.niveauEtude }}</label><br>
+    <label>Email : {{ user.email }}</label><br>
+    <label>Téléphone : {{ user.telephone }}</label><br>
+    <label>Gouvernorat : {{ user.gouvernorat }}</label><br>
+    <label>Ville : {{ user.ville }}</label><br>
+    <button (click)="closeModal()" class="login-button">Fermer</button>
+    <button (click)="logOut()" class="login-button">Déconnexion</button>
+  
+    <button *ngIf="user.is_add" class="login-button" (click)="openAdd()" routerLink="/adminCont">Contrôle Admin</button>
+  </div>
+</div>
+
+
+
+

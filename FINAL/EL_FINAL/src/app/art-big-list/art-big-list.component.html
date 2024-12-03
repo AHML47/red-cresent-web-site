@@ -1,0 +1,8 @@
+<div class="matrix-container">
+    <div *ngFor="let article of articeles" >
+        <div *ngIf="article.title && !article.hide" class="article-item" >
+            <app-icon-article  titel={{article.title}} subject={{article.subject}} text={{article.text}} imgURL={{article.image}} id={{article}}></app-icon-article>
+    </div>
+    </div>
+  </div>
+  

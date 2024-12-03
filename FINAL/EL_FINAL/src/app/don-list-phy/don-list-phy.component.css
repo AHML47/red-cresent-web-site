@@ -1,0 +1,81 @@
+/* Styling the table */
+table.donations-table {
+  width: 100%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  font-size: 16px;
+  text-align: left;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Header styling */
+table.donations-table thead {
+  background: linear-gradient(145deg, #ff0000, #cc0000);
+  color: white;
+}
+
+table.donations-table th {
+  padding: 15px 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-align: center;
+  border-bottom: 2px solid #f2f2f2;
+}
+
+/* Row styling */
+table.donations-table tbody tr {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+table.donations-table tbody tr:nth-child(even) {
+  background-color: #fff5f5;
+}
+
+table.donations-table tbody tr:nth-child(odd) {
+  background-color: #ffecec;
+}
+
+table.donations-table tbody tr:hover {
+  background-color: #ffdede;
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+/* Cell styling */
+table.donations-table td {
+  padding: 12px 20px;
+  font-size: 14px;
+  text-align: center;
+  color: #333333;
+}
+
+/* Add a subtle border to cells */
+table.donations-table tbody td {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  table.donations-table {
+    font-size: 14px;
+  }
+
+  table.donations-table th,
+  table.donations-table td {
+    padding: 10px;
+  }
+}
+
+/* Add glow effect for header and hover */
+table.donations-table thead th {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table.donations-table tbody tr:hover td {
+  color: #d00000;
+  text-shadow: 0 1px 3px rgba(255, 0, 0, 0.3);
+}

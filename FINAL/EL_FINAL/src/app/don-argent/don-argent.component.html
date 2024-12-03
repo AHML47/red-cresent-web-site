@@ -1,0 +1,16 @@
+
+    <div class="container">
+        <div class="form">
+            <h1 class="heading">faire un don</h1>
+            <input type="button" class="button" name="b1" value="20dt" (click)="setMontant('20')">
+            <input type="button"  class="button" name="b2" value="50dt" (click)="setMontant('50')">
+            <input type="button" class="button" name="b3" value="80dt" (click)="setMontant('80')"><br><br>
+
+            <input type="text" class="input" placeholder="Choisir un montant" [(ngModel)]="montant" name="txt"><br><br>
+
+            <input type="submit" value="Je donne" class="login-button" (click)="sendMony()">
+
+
+        </div>
+    </div>
+    

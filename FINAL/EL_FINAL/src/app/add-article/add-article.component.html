@@ -1,0 +1,10 @@
+<form style="text-align:center">
+    <label for="arTitel">le titre : </label>
+    <input type="text" name="Artitel" [(ngModel)]="arTitel"><br>
+    <label for="arSub">le sujet : </label>
+    <input type="text" name="arSub" [(ngModel)]="arSub"><br>
+    <label > ajouté un photo : <input type="file"  (change)="onFileChange($event)" ></label><br>
+    <label for="arText">l'article : </label>
+    <textarea name="arText" rows="100" cols="100"  [(ngModel)]="arText"></textarea>
+    <button type="submit" (click)="addArticle()">fin</button>
+  </form>

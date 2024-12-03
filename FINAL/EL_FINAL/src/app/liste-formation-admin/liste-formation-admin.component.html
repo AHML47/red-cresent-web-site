@@ -1,0 +1,28 @@
+<table class="donations-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Location</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let formation of formations">
+        <td *ngIf="formation.title">{{ formation.id }}</td>
+        <td *ngIf="formation.title">{{ formation.title }}</td>
+        <td *ngIf="formation.title">{{ formation.date }}</td>
+        <td *ngIf="formation.title">{{ formation.location }}</td>
+        <td>
+          <button *ngIf="formation.title"
+            (click)="HideFormation(formation.title)" 
+            [ngClass]="getClass(formation.title)" 
+            name="btn">
+            chacher
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  

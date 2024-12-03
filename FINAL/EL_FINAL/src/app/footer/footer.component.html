@@ -1,0 +1,54 @@
+<div class="footer-container">
+    <div class="footer-content">
+      <h2 class="footer-title">Contactez Nous</h2>
+      <div class="contact-info">
+        <div class="info-item">
+          <span class="info-title">Téléphone</span>
+          <span class="info-details">+216 71 325 572, +216 71 320 630</span>
+        </div>
+        <div class="info-item">
+          <span class="info-title">Fax</span>
+          <span class="info-details">+216 71 320 251, +216 71 253 052</span>
+        </div>
+        <div class="info-item">
+          <span class="info-title">Adresse</span>
+          <span class="info-details">19, Rue d'Angleterre, 1000 Tunis</span>
+        </div>
+        <div class="info-item">
+          <span class="info-title">Email</span>
+          <span class="info-details">contact.croissant-rouge.tn</span>
+        </div>
+        <div class="info-item">
+          <span class="info-title">Réseaux sociaux</span>
+          <span class="info-details">
+            Instagram: <a href="https://www.instagram.com/croissantRouge" target="_blank">croissantRouge</a><br>
+            Facebook: <a href="https://www.facebook.com/croissantrouge.tunisien" target="_blank">croissant rouge tunisien</a>
+          </span>
+        </div>
+      </div>
+      <div class="footer-btn">
+        <button (click)="openForm()">Envoyer un message</button>
+      </div>
+    </div>
+  
+    <!-- Formulaire modal -->
+    <div *ngIf="showForm" class="form-modal">
+      <div class="form-container">
+        <h3>Envoyer un message</h3>
+        <div>
+          <label for="name">Nom :</label>
+          <input type="text" id="name" [(ngModel)]="name" name="name" required />
+          
+          <label for="email">Email :</label>
+          <input type="email" id="email" [(ngModel)]="email" name="email" required />
+          
+          <label for="message">Message :</label>
+          <textarea id="message" [(ngModel)]="message" name="message" required></textarea>
+          
+          <button type="submit" (click)="submitMessage()">Envoyer</button>
+          <button type="button" (click)="closeForm()">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
